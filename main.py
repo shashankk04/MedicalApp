@@ -17,18 +17,11 @@ def handle_full_sentence(full_sentence):
     st.write("\n" * 2)
 
 # Create an asyncio event loop
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
-
-# Streamlit app logic
 if st.button("🎤 Microphone"):
     st.write("Recording")
-    # Run the asynchronous function in a new thread
-    async def run_transcription():
-        await get_transcript(handle_full_sentence)
 
-    loop.run_until_complete(run_transcription())
-    
-    #function call mp3
+    # Run the asynchronous function using asyncio.run
+    asyncio.run(get_transcript(handle_full_sentence))
+
+    # Call the function to play the audio
     play_audio("output.wav")
-    
