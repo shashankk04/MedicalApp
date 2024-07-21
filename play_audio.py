@@ -1,6 +1,7 @@
 import pygame
-import logging
-import time
+import time, logging
+
+
 def play_audio(file_path):
     try:
         pygame.mixer.init()  # Initialize pygame mixer here

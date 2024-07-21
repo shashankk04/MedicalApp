@@ -34,15 +34,8 @@ def process(Query):
             },
         }
 
-        # A stop sequence is a predefined or user-specified text string that
-        # signals an AI to stop generating content, ensuring its responses
-        # remain focused and concise. Examples include punctuation marks and
-        # markers like "[end]".
-        # stop=None,
     )
     data = chat_completion.choices[0].message.content
     
     conversation_history.append({"role": "assistant", "content": data})
     return json.loads(data)
-
-# print(process('hi, what are the chances of raining today in philly'))

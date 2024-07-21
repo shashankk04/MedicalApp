@@ -8,7 +8,7 @@ import llama_call
 def decide(question):
     llm_response = llama_call.process(question)
     print(llm_response)
-
+    
     if llm_response['need_search'] == 'no':
                 return llm_response['answer']
     else:
@@ -19,6 +19,3 @@ def decide(question):
         
         return decide(f"CONTEXT: {context}, QUESTION: {question}")
 
-# for i in range(5):
-#     Q = input("Question: ")
-#     print(decide(Q))
