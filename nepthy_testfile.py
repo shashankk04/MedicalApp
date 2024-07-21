@@ -30,7 +30,7 @@ from dotenv import load_dotenv
 import pygame
 st.set_page_config(
     page_title="Medi App",
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="collapsed",
 )
 DEEPGRAM_API_KEY = "efa3d25b8d1f2fd622d951a2a95c4d7e6383fd1d"
@@ -183,9 +183,9 @@ class ConversationManager:
 
             if self.response:
                 llm_response = self.llm.process(self.response)
-                st.write("MediBot is thinking...")
+                st.write("Eva is thinking...")
                 text_to_speech(llm_response, "output.wav")
-                st.write(llm_response)
+                st.write(f"Eva: {llm_response}")
                 st.write("\n" * 2)
                 self.response = ""
 
