@@ -36,6 +36,7 @@ st.set_page_config(
 DEEPGRAM_API_KEY = "efa3d25b8d1f2fd622d951a2a95c4d7e6383fd1d"
 GROQ_API_KEY = "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"
 deepgram_client = DeepgramClient(api_key=DEEPGRAM_API_KEY)
+
 class LanguageModelProcessor:
     def __init__(self):
         self.llm = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768", groq_api_key=GROQ_API_KEY)
