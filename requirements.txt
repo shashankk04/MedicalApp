@@ -1,0 +1,6 @@
+python-dotenv
+langchain-community
+groq
+pygame
+streamlit
+deepgram-sdk
