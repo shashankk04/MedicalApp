@@ -1,2 +1,4 @@
 API_key.json
 .env
+.devcontainer
+__pycache__
