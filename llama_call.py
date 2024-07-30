@@ -27,9 +27,16 @@ def process(Query):
 
         response_format={
             "type": "json_object",
-            "schema": {
+            "items": {
                 "type": "object",
-                "properties": {"need_search": {"type": "string"}, "answer": {"type": "string"}},
+                "properties": {
+                    "need_search": {
+                        "type": "string"
+                    },
+                    "answer": {
+                        "type": "string"
+                    }
+                },
                 "required": ["need_search", "answer"],
             },
         }
