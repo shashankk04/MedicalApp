@@ -27,17 +27,19 @@ def process(Query):
 
         response_format={
             "type": "json_object",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "need_search": {
-                        "type": "string"
+            "schema": {
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "need_search": {
+                            "type": "string"
+                        },
+                        "answer": {
+                            "type": "string"
+                        }
                     },
-                    "answer": {
-                        "type": "string"
-                    }
-                },
-                "required": ["need_search", "answer"],
+                    "required": ["need_search", "answer"],
+                }
             },
         }
 
@@ -46,3 +48,5 @@ def process(Query):
     
     conversation_history.append({"role": "assistant", "content": data})
     return json.loads(data)
+
+print(process("what will be the weather tomorrow?"))
