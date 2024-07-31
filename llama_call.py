@@ -49,4 +49,4 @@ def process(Query):
     conversation_history.append({"role": "assistant", "content": data})
     return json.loads(data)
 
-print(process("what will be the weather tomorrow?"))
+# print(process("what will be the weather tomorrow?"))
